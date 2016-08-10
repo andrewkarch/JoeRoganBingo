@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="Joe">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="application/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+    <title>Joe Rogan Bingo!</title>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Joe Rogan Experience Bingo</h1>
+        <table ng-controller="Bingo">
+            <tr ng-repeat="i in [1,2,3,4,5]">
+                <td ng-repeat="x in [1,2,3,4,5]" onclick="clicked(this)" class="squareBlock">
+                </td>
+            </tr>
+        </table>
+        <div id="footing">
+            <button type="button" id="FC" class="btn btn-primary" onclick="reset(this)">New Fight Companion</button>
+            <button type="button" id="JRE" class="btn btn-primary" onclick="reset(this)">New JRExperience</button>
+            <p id="sig">A fan project made with <i class="glyphicon glyphicon-heart"></i> by Andrew</p>
+        </div>
+    </div>
+</body>
+
+</html>
